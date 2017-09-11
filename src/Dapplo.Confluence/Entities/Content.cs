@@ -76,5 +76,8 @@ namespace Dapplo.Confluence.Entities
         /// </summary>
         [DataMember(Name = "version", EmitDefaultValue = false)]
         public Version Version { get; set; }
+
+        [DataMember(Name = "metadata", EmitDefaultValue = false)]
+        public ContentMetadata Metadata { get; set; }
     }
 }

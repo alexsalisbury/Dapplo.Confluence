@@ -32,7 +32,7 @@ namespace Dapplo.Confluence.Entities
 	///     See: https://docs.atlassian.com/confluence/REST/latest
 	/// </summary>
 	[DataContract]
-	public class Metadata
+	public class AttachmentMetadata
 	{
 		/// <summary>
 		///     A comment for the attachment
@@ -45,5 +45,19 @@ namespace Dapplo.Confluence.Entities
 		/// </summary>
 		[DataMember(Name = "mediaType", EmitDefaultValue = false)]
 		public string MediaType { get; set; }
-	}
+    }
+
+    /// <summary>
+    ///     Metadata information, used in attachment
+    ///     See: https://docs.atlassian.com/confluence/REST/latest
+    /// </summary>
+    [DataContract]
+    public class ContentMetadata
+    {
+        /// <summary>
+        ///     A comment for the attachment
+        /// </summary>
+        [DataMember(Name = "labels", EmitDefaultValue = false)]
+        public Result<Labels<long>> Labels { get; set; }
+    }
 }

@@ -121,7 +121,7 @@ namespace Dapplo.Confluence.Tests
         [Fact]
         public async Task TestSearch()
         {
-            ConfluenceClientConfig.ExpandSearch = new[] {"version", "space", "space.icon", "space.description", "space.homepage", "history.lastUpdated"};
+            ConfluenceClientConfig.ExpandSearch = new[] {"version", "space", "space.icon", "space.description", "space.homepage", "history.lastUpdated", "metadata.labels"};
 
             var searchResult = await _confluenceClient.Content.SearchAsync(Where.And(Where.Type.IsPage, Where.Text.Contains("Test Home")), limit:1);
             Assert.Equal("page", searchResult.First().Type);

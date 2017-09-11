@@ -44,7 +44,7 @@ namespace Dapplo.Confluence.Entities
         ///     Additional meta-data for the attachment, like the comment
         /// </summary>
         [DataMember(Name = "metadata", EmitDefaultValue = false)]
-        public Metadata Metadata { get; set; }
+        public AttachmentMetadata Metadata { get; set; }
 
         /// <summary>
         ///     Title for the attachment
